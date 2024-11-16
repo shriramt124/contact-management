@@ -1,9 +1,9 @@
 import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
 
-const ContactContext = createContext();
+export const ContactContext = createContext();
 
-const ContactProvider = ({ children }) => {
+export const ContactProvider = ({ children }) => {
     const [contacts, setContacts] = useState([]);
     const API_BASE_URL = "http://localhost:3000/api/v1";
 
@@ -11,7 +11,7 @@ const ContactProvider = ({ children }) => {
     const fetchContacts = async () => {
         try {
             const response = await axios.get(`${API_BASE_URL}/contacts`);
-            setContacts(response.data?.contact);
+            setContacts(response.data.contact);
         } catch (error) {
             console.error("Error fetching contacts:", error);
         }
@@ -56,7 +56,7 @@ const ContactProvider = ({ children }) => {
 
     useEffect(() => {
         fetchContacts();
-    }, [setContacts]);
+    }, []);
 
     return (
         <ContactContext.Provider
@@ -67,4 +67,4 @@ const ContactProvider = ({ children }) => {
     );
 };
 
-export { ContactContext, ContactProvider };
+ 

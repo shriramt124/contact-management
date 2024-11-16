@@ -46,3 +46,5 @@ List all contacts: The app displays a table of all the contacts.
 * State Management: The application uses React Context API to manage global state for contacts across the app.
 * API Communication: The frontend communicates with the backend via Axios to handle HTTP requests.
 
+
+![alt text](<Screenshot 2024-11-16 104627.png>)
