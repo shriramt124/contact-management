@@ -30,7 +30,7 @@ List all contacts: The app displays a table of all the contacts.
 
 ## Database Schema
 
-{
+`{
   "_id": ObjectId,
   "firstName": String,
   "lastName": String,
@@ -38,7 +38,7 @@ List all contacts: The app displays a table of all the contacts.
   "phone": String,
   "company": String,
   "jobTitle": String
-}
+}`
 
 ## Technical Decisions
 * Frontend: Built with React.js to provide a dynamic and responsive UI. Material-UI was chosen for the UI components due to its simplicity and ease of use.
